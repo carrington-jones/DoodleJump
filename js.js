@@ -78,13 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
             doodler.style.bottom = doodlerBottomSpace + 'px'
             if (doodlerBottomSpace > startPoint + 200) {
                 fall();
+                isJumping = false
             }
         }, 30)
     }
 
     function fall() {
-        clearInterval(upTimerId) // This clear interval makes sure that we are not falling when doodler should be jumping
         isJumping = false
+        clearInterval(upTimerId) // This clear interval makes sure that we are not falling when doodler should be jumping
         downTimerId = setInterval(function () {
             doodlerBottomSpace -= 5;
             doodler.style.bottom = doodlerBottomSpace + 'px'
@@ -102,10 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log("LANDED!")
                     startPoint = doodlerBottomSpace //Whatever doodler bottomspace is at this time is "startPoint"
                     jump()
+                    isJumping = true
                 }
                     })
 
-        }, 30)
+        }, 20)
     }
 
     function gameOver() {
