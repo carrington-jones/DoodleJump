@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     let firstPlatform = platforms[0].visual
                     firstPlatform.classList.remove('platform') // This is done so we cannot visually see this platform anymore
                     platforms.shift() //Gets rid of platform
-                    score++ //Everyime a platform is removed the score goes up
+                    score++ //Everytime a platform is removed the score goes up
                     let newPlatform = new Platform(600) //Add new platform to top of grid. Height of grid is 600px
                     platforms.push(newPlatform)
 
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         while(grid.firstChild) {
             grid.removeChild(grid.firstChild)
         }
-        grid.innerHTML = score // Displays users score when game is over
+        grid.innerHTML = "Your score is " + score + "!" // Displays users score when game is over
         clearInterval(upTimerId)
         clearInterval(downTimerId)
         clearInterval(leftTimerId)

@@ -3,15 +3,16 @@
     height: 600px;
     background-color: yellow;
     position: relative;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
+    background-image: url('background.png');
 }
 
 .doodler {
-    width: 60px;
+    width: 87px;
     height: 85px;
-    background-color: red;
     position: absolute; /*Absolute position is to make sure that doodler is inside the grid*/
+    background-image: url('doodler-guy.png');
 }
 
 .platform{
@@ -19,4 +20,5 @@
     height: 15px;
     background-color: green;
     position: absolute; /*Absolute position is to make sure that platform is inside the grid*/
+    background-image: url('platform.png');
 }
